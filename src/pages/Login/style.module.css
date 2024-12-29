@@ -1,0 +1,39 @@
+.wrapper {
+  @apply w-full h-screen flex justify-center items-center bg-[url(/assets/imgs/login_bg.jpg)] bg-no-repeat bg-cover bg-right-bottom;
+}
+
+.box {
+  @apply p-5 text-white rounded-2xl max-w-[700px] w-full bg-[rgba(0,0,0,0.1)] backdrop-blur-sm flex flex-col justify-center items-center;
+}
+
+.title {
+  @apply text-3xl;
+}
+
+.form {
+  @apply flex flex-col gap-2 w-full;
+}
+
+.input {
+  @apply p-2 rounded-md outline-none text-black;
+}
+
+.button {
+  @apply bg-green-500 p-2 rounded-lg mt-4 outline-none;
+}
+
+.error_mes {
+  @apply text-sm text-red-500;
+}
+
+.checkbox {
+  @apply flex items-center justify-between;
+}
+
+.checkbox > input {
+  @apply w-4 h-4;
+}
+
+.checkbox > select {
+  @apply outline-none p-1;
+}

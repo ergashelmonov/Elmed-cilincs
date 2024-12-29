@@ -1,0 +1,23 @@
+.wrapper {
+  @apply flex;
+}
+
+.box {
+  @apply bg-gray-200 w-full p-7;
+}
+
+.search_form > input {
+  @apply border rounded-xl p-3 outline-none;
+}
+
+.title {
+  @apply text-5xl my-8;
+}
+
+.info {
+  @apply text-2xl;
+}
+
+.info_box {
+  @apply p-5 mt-9 shadow-2xl border border-solid border-black rounded-2xl;
+}
