@@ -1,13 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
  
   "rewrites": [
     {
@@ -15,12 +6,7 @@
       "destination": "/index.html"
     }
   ]
-,
 
- 
-  "env": {
-    "VITE_API_URL": "https://elmed-bot-a65501ed60c6.herokuapp.com"
-  }
 
   
 }
