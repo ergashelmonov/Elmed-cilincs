@@ -16,8 +16,8 @@ export const loginRu = {
 };
 
 export const adminPanelNavbarRu = [
-  { title: "Ҳисоботлар", url: "/" },
-  { title: "Ходимлар", url: "/d" },
+  { title: "Ҳисоботлар", url: "/reports" },
+  { title: "Ходимлар", url: "/workers" },
   { title: "Беморлар", url: "/c" },
   { title: "Назорат", url: "/v" },
   { title: "Созламалар", url: "/v" },
@@ -30,4 +30,13 @@ export const adminPanelNavbarUz = [
   { title: "Nazorat", url: "/v" },
   { title: "Sozlamalar", url: "/v" },
   { title: "Parolni o'zgartirish", url: "/v" },
+];
+
+export const pagesReport = [
+  { title: "Курсатилган хизматлар кунлик ҳисоботи", url: "/reports/daily" },
+  { title: "Курсатилган хизматлар даврий ҳисоботи", url: "/reports/periodic" },
+  { title: "Касса кунлик ҳисоботи", url: "/reports/cash-daily-reports" },
+  { title: "Кассанинг даврий ҳисоботи", url: "/reports/cash-reports" },
+  { title: "Харажатлар кунлик руйхати", url: "/reports/expenses-daily" },
+  { title: "Харажатлар даврий руйхати", url: "/reports/expenses" },
 ];

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useAuth } from "../../store/useAuth";
 import { loginRu, loginUz } from "../../utils/contains";
 import { useNavigate } from "react-router-dom";
+import { apiClient } from "../../api";
 
 export const Login = () => {
   const { wrapper, box, title, form, input, button, error_mes, checkbox } = css;
@@ -14,17 +15,26 @@ export const Login = () => {
   const { lang, setLang, setAuth } = useAuth();
   const navigate = useNavigate();
 
+  // useEffect(() => {
+  //   fetch("https://elmed-bot-a65501ed60c6.herokuapp.com/some-endpoint").then((data)=>console.log(data.data));
+  // }, []);
+
   const submit = (e) => {
     e.preventDefault();
 
-    if (name === "fazliddin" && password === "12345678") {
-      setErr(false);
-      localStorage.setItem("login", "true");
-      setAuth(true);
-      navigate("/");
-    } else {
-      setErr(true);
-    }
+    apiClient
+      .post(
+        "/login",
+
+        {
+          username: name,
+          password: password,
+        }
+      )
+      .then((data) => {
+        localStorage.setItem("token", data.data.token);
+        navigate("/");
+      });
   };
   const login = JSON.parse(localStorage.getItem("login"));
   useEffect(() => {

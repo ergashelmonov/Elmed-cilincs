@@ -1,19 +1,15 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../../store/useAuth";
-import {
-  adminPanelNavbarRu,
-  adminPanelNavbarUz,
-} from "../../../utils/contains";
+
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 import css from "./style.module.css";
 import { apiClient } from "../../../api";
 
-export const SideBar = () => {
+export const SideBarUnvers = ({ title, url, pages }) => {
   const { side_bar, side_bar_header, navbar, active, link, close_btn } = css;
   const { lang, setLang } = useAuth();
-  const changeLang =
-    lang === "Узбекча" ? adminPanelNavbarRu : adminPanelNavbarUz;
+
   const navigate = useNavigate();
 
   const logout = () => {
@@ -27,8 +23,19 @@ export const SideBar = () => {
       <div className={side_bar_header}>
         <img src="/assets/icons/logo.png" alt="" />
       </div>
+      <div style={{ margin: "40px 0" }}>
+        <NavLink to={"/"} className={link}>
+          Бош саҳифага кайтиш
+        </NavLink>
+      </div>
+      <NavLink
+        to={url}
+        className={({ isActive }) => (isActive ? active : link)}
+      >
+        {title}
+      </NavLink>
       <nav className={navbar}>
-        {changeLang.map((item, index) => {
+        {pages.map((item, index) => {
           return (
             <NavLink
               key={index}

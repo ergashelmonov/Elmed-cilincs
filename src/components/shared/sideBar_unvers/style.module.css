@@ -1,0 +1,19 @@
+.side_bar {
+  @apply max-w-[500px] p-5 min-h-screen;
+}
+
+.side_bar_header {
+  @apply w-[300px];
+}
+
+.navbar {
+  @apply flex flex-col items-start gap-4 mt-6 pl-4 font-bold;
+}
+
+.active {
+  @apply underline text-green-500;
+}
+
+.close_btn {
+  @apply text-red-600 flex items-center gap-3;
+}

@@ -1,0 +1,20 @@
+.input {
+  @apply w-44 border border-solid p-5;
+}
+
+.input + button {
+  @apply border border-solid p-2 rounded-lg;
+}
+
+.title {
+  @apply p-4 border border-solid text-center w-full border-black mt-8;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > td {
+  @apply border border-solid border-black p-2;
+}
+
+.box {
+  @apply flex flex-col gap-4 w-full p-5;
+}
