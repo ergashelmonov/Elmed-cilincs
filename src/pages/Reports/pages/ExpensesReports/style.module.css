@@ -1,0 +1,28 @@
+.box {
+  @apply flex flex-col my-[100px] mx-auto;
+}
+
+.box > div {
+  @apply flex w-full justify-between gap-4;
+}
+
+.box > div > input {
+  @apply border border-solid p-2 rounded-lg outline-none;
+}
+
+.box > button {
+  @apply border border-solid  self-center p-3 px-6 border-black rounded-lg;
+}
+
+.title {
+  @apply p-4 border border-solid text-center w-full border-black mt-8;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > td {
+  @apply border border-solid border-black p-2;
+}
+
+.box {
+  @apply flex flex-col gap-4 w-full p-5;
+}
