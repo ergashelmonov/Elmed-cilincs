@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "builds": [
     {
       "src": "package.json",
@@ -9,12 +8,15 @@
       }
     }
   ],
-  "routes": [
+ 
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  ],
+  ]
+,
+
  
   "env": {
     "VITE_API_URL": "https://elmed-bot-a65501ed60c6.herokuapp.com"
