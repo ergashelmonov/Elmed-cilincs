@@ -1,0 +1,23 @@
+.input {
+  @apply border border-solid border-black p-3 max-w-[300px] w-full;
+}
+
+.box {
+  @apply flex justify-between my-4 max-w-[900px] w-full;
+}
+
+.wrapper {
+  @apply flex justify-center flex-col w-full items-center;
+}
+
+.wrapper > h2 {
+  @apply text-3xl my-5;
+}
+
+.box > label {
+  @apply text-2xl;
+}
+
+.btn {
+  @apply px-5 py-3 bg-green-700 rounded-md text-white my-2;
+}
