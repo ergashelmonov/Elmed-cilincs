@@ -15,6 +15,7 @@ export const SideBarUnvers = ({ title, url, pages }) => {
   const logout = () => {
     const logoutP = async () => await apiClient.post("/logout");
     logoutP();
+    localStorage.clear();
     navigate("/login");
   };
 
