@@ -1,0 +1,23 @@
+.wrapper {
+  @apply bg-[rgba(0,0,0,0.3)] w-full fixed top-0 left-0 z-[9999] h-screen flex justify-center items-center;
+}
+
+.modal {
+  @apply p-4 bg-white rounded-2xl flex flex-col gap-6;
+}
+
+.modal > h2 {
+  @apply text-2xl;
+}
+
+.btn_box {
+  @apply flex gap-3 w-full;
+}
+
+.btn1 {
+  @apply bg-red-600 py-2 px-3 text-white w-full rounded-lg;
+}
+
+.btn2 {
+  @apply bg-green-600 py-2 px-3 text-white w-full rounded-lg;
+}
