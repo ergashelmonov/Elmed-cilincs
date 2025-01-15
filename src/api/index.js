@@ -21,7 +21,6 @@ apiClient.interceptors.request.use(
     if (error.response.status === 401) {
       localStorage.clear();
       window.location.href = "/login";
-      setTimeout(() => window.location.reload(), 100);
     }
     return Promise.reject(error);
   }
@@ -35,7 +34,6 @@ apiClient.interceptors.response.use(
     if (error.response.status === 401) {
       localStorage.clear();
       window.location.href = "/login";
-      setTimeout(() => window.location.reload(), 100);
     }
     return Promise.reject(error);
   }
