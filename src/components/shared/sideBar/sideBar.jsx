@@ -19,6 +19,7 @@ export const SideBar = () => {
   const logout = () => {
     const logoutP = async () => await apiClient.post("/logout");
     logoutP();
+    localStorage.clear();
     navigate("/login");
   };
 
