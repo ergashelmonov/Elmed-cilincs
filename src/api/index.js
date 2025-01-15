@@ -19,7 +19,7 @@ apiClient.interceptors.request.use(
   },
   (error) => {
     if (error.response.status === 401) {
-      // window.history.pushState({}, "", "/login");
+      localStorage.clear();
       window.location.href = "/login";
       setTimeout(() => window.location.reload(), 100);
     }
@@ -33,7 +33,7 @@ apiClient.interceptors.response.use(
   },
   (error) => {
     if (error.response.status === 401) {
-      // window.history.pushState({}, "", "/login");
+      localStorage.clear();
       window.location.href = "/login";
       setTimeout(() => window.location.reload(), 100);
     }
